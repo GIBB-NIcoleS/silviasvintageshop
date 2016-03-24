@@ -1,0 +1,65 @@
+@font-face {
+    font-family: Admiration_Pains;
+    src: url('font/Admiration_Pains.ttf');
+} 
+
+*{
+	font-family: 'Arial', sans-serif;
+	margin: 0px 0px;
+}
+
+.logo{
+	font-family: Admiration_Pains;	
+}
+
+#active {
+    background-color: #4CAF50;
+}
+
+#login{
+	float:right;
+}
+
+.inhalt{
+	margin: 40px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a , li p{
+	color: #ffffff;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+
+footer{
+	color: #ffffff;
+    background-color: #333;
+	padding: 20px;
+    overflow: hidden;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+	font-size: 15px;
+}
