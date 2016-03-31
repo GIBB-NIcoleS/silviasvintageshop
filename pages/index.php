@@ -11,18 +11,18 @@
 </head>
 <html>
 	<body>
-		<nav >
+		<nav>
 			<ul>
 			<li><p class="logo">Silvias Vintage shop</p></li>
 			<li><a href="?p=home" id="active">HOME</a></li>
-			<li><a href="?p=article">Artikel</a></li>
+			<li><a href="?p=article&d=all">Artikel</a></li>
 			<li><a href="#">Blog</a></li>
 			<li><a href="#">About US</a></li>
 			<li><a href="#">LogIn</a></li>
 			</ul>
-		</nav>
+		
 <?php 
-	if(isset($_GET['p'] )){
+	if(isset($_GET['p'])|| isset($_GET['d'] )){
 		$p = $_GET['p'];
 		switch($p){
 		case 'home' :{
@@ -33,9 +33,7 @@
 			require_once("article.php");
 		}
 		
-		default: {
-			require_once("home.php");
-		}
+		default: {}
 	}
 	}
 	else{ 
