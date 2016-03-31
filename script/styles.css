@@ -10,37 +10,66 @@
 }
 
 .logo{
-	font-family: Admiration_Pains;	
-}
-
-#active {
-    background-color: #4CAF50;
+	font-family: Admiration_Pains;
 }
 
 #login{
 	float:right;
 }
 
-.inhalt{
-	margin: 40px;
-}
-
 #auswahl{
-	margin: 0px;
-	padding: 0px;
+    background-image: url("../images/wood.jpg");
+    background-repeat: repeat-x;
+	filter: saturate(50%);
+	/* Browser Specific */
+	-webkit-filter: saturate(50%);
+	-moz-filter: saturate(50%);
+	-o-filter: saturate(50%);
+	-ms-filter: saturate(50%);
 }
 
-IMG.displayed {
+.article-img {
     display: block;
-    margin-left: auto;
-    margin-right: auto; }
+    margin: 20px;
+    height: auto; 
+	width: auto;}
+
+.uebersicht{
+	margin-left: auto;
+    margin-right: auto;
+}	
+	
+.artikel{
+	display: block;
+	float: left;
+	height: 50px;
+}	
+	
+nav ul {
+	font-size: 18px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #222;
+	color: #ffffff;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
-    background-color: #333;
 }
 
 li {
@@ -53,18 +82,14 @@ li a , li p{
     color: white;
     text-align: center;
     padding: 14px 16px;
-	margin: 0px;
     text-decoration: none;
 }
 
-li a:hover:not(.active) {
-    background-color: #111;
-}
 
 
 footer{
 	color: #ffffff;
-    background-color: #333;
+    background-color: #222;
 	padding: 20px;
     overflow: hidden;
 	position: absolute;
