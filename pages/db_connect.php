@@ -1,4 +1,4 @@
 <?php
-	$mysqli = new mysqli("localhost","Safeturn","","safeturn");
+	$mysqli = new mysqli("localhost","online shop","vintage","online shop");
 
 ?>
