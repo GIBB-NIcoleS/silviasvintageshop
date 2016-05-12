@@ -29,13 +29,16 @@ function log_fail(){
 	document.getElementById('LogFehler').style.color = "#f00";
 }
 
-function register(){
-	vorn = document.getElementById('vorn');
-	nachn = document.getElementById('nachn');
-	username = document.getElementById('user');
-	pass1 = document.getElementById('passwd');
-	pass2 = document.getElementById('passwd2');
-	mail = document.getElementById('email');
+/*function register(){
+	username = document.getElementById('username');
+	pass1 = document.getElementById('pass1');
+	pass2 = document.getElementById('pass2');
+	mail = document.getElementById('mail');
+	
+	fname = document.getElementById('f_name');
+	fpass1 = document.getElementById('f_pass1');
+	fpass2 = document.getElementById('f_pass2');
+	fmail = document.getElementById('f_mail');
 	
 	pVorn = false;
 	pNachn = false;
@@ -103,55 +106,55 @@ function register(){
 		if(username.value.length >= 3 && username.value.length <= 10){
 			for(i = 0; i < username.value.length; i++){
 				if(buchstabe.indexOf(username.value.charAt(i)) >= 0){
-					//fname.innerHTML = "Ok";
-					//fname.style.color = green;
+					fname.innerHTML = "Ok";
+					fname.style.color = green;
 					pName =  true;
 				}	
 				else{
-					//fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
-					//fname.style.color = red;
+					fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
+					fname.style.color = red;
 					break;
 				}
 			}
 		}
 		else{
-			//fname.innerHTML = "Der Benutzernaem muss zwischen 3 und 10 Zeichen lang sein";
-			//fname.style.color = red;
+			fname.innerHTML = "Der Benutzernaem muss zwischen 3 und 10 Zeichen lang sein";
+			fname.style.color = red;
 		}
 	}else{
-		//fname.innerHTML = 'Sie m&uuml;ssen einen Benutzernamen angeben';
-		//fname.style.color = red;
+		fname.innerHTML = 'Sie m&uuml;ssen einen Benutzernamen angeben';
+		fname.style.color = red;
 	}
 	//passwort überprüfung
 	if(pass1.value != ''){
 		if(pass1.value.length >= 6 && pass1.value.length <= 12){
-			//fpass1.innerHTML = 'Ok';
-			//fpass1.style.color = green;
+			fpass1.innerHTML = 'Ok';
+			fpass1.style.color = green;
 			pPass1 = true;
 		}
 		else{
-			//fpass1.innerHTML = 'Das Passwort muss zwischen 6 und 10 Zeichen Lang sein';
-			//fpass1.style.color = red;
+			fpass1.innerHTML = 'Das Passwort muss zwischen 6 und 10 Zeichen Lang sein';
+			fpass1.style.color = red;
 		}
 	}
 	else{
-		//fpass1.innerHTML = 'Sie m&uuml;ssen ein Passwort angeben';
-		//fpass1.style.color = red;
+		fpass1.innerHTML = 'Sie m&uuml;ssen ein Passwort angeben';
+		fpass1.style.color = red;
 	}
 	//Passwortwiederholung überprüfung
 	if(pass2.value != ''){
 		if(pass2.value == pass1.value){
-			//fpass2.innerHTML = 'Ok'
-			//fpass2.style.color = green;
+			fpass2.innerHTML = 'Ok'
+			fpass2.style.color = green;
 			pPass2 = true;
 		}
 		else{
-			//fpass2.innerHTML = 'Die Passw&ouml;rter stimmen nicht &uuml;berein';
-			//fpass2.style.color = red;
+			fpass2.innerHTML = 'Die Passw&ouml;rter stimmen nicht &uuml;berein';
+			fpass2.style.color = red;
 		}
 	}else{
-		//fpass2.innerHTML = 'Sie m&uuml;ssen das Passwort wiederholen';
-		//fpass2.style.color = red;
+		fpass2.innerHTML = 'Sie m&uuml;ssen das Passwort wiederholen';
+		fpass2.style.color = red;
 	}
 	//EMail überprüfung
 	at = '@';
@@ -173,17 +176,17 @@ function register(){
 		}
 		
 		if(Pot == true && Pat == true){
-			//fmail.innerHTML = 'Ok';
-			//fmail.style.color = green;
+			fmail.innerHTML = 'Ok';
+			fmail.style.color = green;
 			pMail = true;
 		}else{
-			//fmail.innerHTML = 'Diese E-Mail Adresse ist ungültig';
-			//fmail.style.color = red;
+			fmail.innerHTML = 'Diese E-Mail Adresse ist ungültig';
+			fmail.style.color = red;
 		}
 	}
 	else{
-		//fmail.innerHTML = 'Sie m&uuml;ssen eine E-Mail Adresse angeben';
-		//fmail.style.color = red;
+		fmail.innerHTML = 'Sie m&uuml;ssen eine E-Mail Adresse angeben';
+		fmail.style.color = red;
 	}
 	//überprüfung
 	if(pName == true && pPass1 == true && pPass2 == true && pMail == true){
@@ -201,11 +204,18 @@ function register(){
 				}
 			}
 		}
+<<<<<<< HEAD
 		//PHP übergabe
 		
 		
 		xmlhttp.open("POST","check.php?aktion=2",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xmlhttp.send("vorn="+vorn.value+"nachn="+nachn.value+"user="+username.value+"&passwd="+pass1.value+"&passwd2="+pass2.value+"&email="+mail.value);
+=======
+		//Registration in der Datenbank
+		xmlhttp.open("POST","verteiler.php?aktion=2",true);
+		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		xmlhttp.send("username="+username.value+"&pass1="+pass1.value+"&pass2="+pass2.value+"&mail="+mail.value);
+>>>>>>> parent of d31429a... REgistrierung
 	}
 }*/
