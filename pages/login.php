@@ -24,9 +24,10 @@
 				<input type="reset" class="btn btn-default" value="Cancel">
 				<input type="submit" class="btn btn-primary" value="Submit" onclick="login()"/>
 			  </div>
-			  <h4 id="registr">Noch nicht registriert?Klick<a href="?p=register.php">Hier!</a></h4>
+			  <h4 id="registr">Noch nicht registriert?Klick<a href="?p=register">Hier!</a></h4>
 			</div>
 	
 		</fieldset>
 	</form>
+</div>	
 	

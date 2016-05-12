@@ -19,8 +19,12 @@ body{
 	margin-right: 10px;
 }
 
-#login{
+.login{
 	float:right;
+}
+
+.center{
+	position:relative;
 }
 
 #search{

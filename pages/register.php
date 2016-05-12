@@ -2,7 +2,7 @@
 	
 	<form class="" name="frmReg"  action="#.php"   method="post"  id="FormR" onsubmit="return">
   <fieldset>
-    <h2 class="logo">Registrierung</h2>
+    <h2 class="logo">Profil</h2>
 	
 	
 	<div class="form-group">

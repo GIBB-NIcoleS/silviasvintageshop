@@ -13,9 +13,9 @@
 				<li><a href="?p=home">HOME</a></li>
 				<li><a href="?p=article&d=all">Artikel</a></li>
 				<li><a href="#">About US</a></li>
-				<li><a href="?p=myProfile">Profil</a></li>
-				<li id="login"><a href="?p=login" >LogIn</a></li>
-				<li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
+				<li class="login"><a href="?p=myProfile">my Profil</a></li>
+				<li class="login"><a href="?p=login" >LogIn</a></li>
+				<li class="icon login"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 			</ul>	
 		</nav>
 <div>
@@ -34,7 +34,7 @@
 			break;
 		}
 		case 'myProfile' :{
-			require_once("myProfile.php");
+			require_once("profil.php");
 			break;
 		}
 		case 'login' :{
