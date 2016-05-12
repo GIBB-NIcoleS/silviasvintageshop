@@ -4,7 +4,7 @@
 	<li class="col-lg-2"><a href="#">Gemälde</a></li>
 	<li class="col-lg-2"><a href="#">Allerlei</a></li>
 	<li class="col-lg-2"><a href="#">Besonderes</a></li>
-	<li class="col-lg-2" ><a href="#"><input class="" id="vorn" name="vorn" placeholder="Vorname" type="text" ></a></li>
+	<li class="col-lg-2" ><a href="#"><input class="" id="search" name="search" placeholder="Search" type="search" ></a></li>
 </ul>
  <fieldset>
 <div class= "col-lg-11 uebersicht">
