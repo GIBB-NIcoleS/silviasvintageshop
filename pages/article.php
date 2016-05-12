@@ -6,7 +6,6 @@
 	<li class="col-lg-2"><a href="#">Besonderes</a></li>
 	<li class="col-lg-2" ><a href="#"><input class="" id="search" name="search" placeholder="Search" type="search" ></a></li>
 </ul>
- <fieldset>
 <div class= "col-lg-11 uebersicht">
 	<div class="col-lg-3 artikel">
 		<h1>Hi</h1>

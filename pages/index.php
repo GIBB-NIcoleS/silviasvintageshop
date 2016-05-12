@@ -53,9 +53,11 @@
 
 		
 		<footer>
-			<h4>Silvia Sager</h4>
-			<p>Erlach unter den Halden 12</p>
-			<p><b>ACHTUNG!</b> Alle Artikel die auf dieser Seite ausgestellt sind <b>unter Vorbehalt!</b></p>
+			<div class="footer">
+				<h4 class="gap">Silvia Sager</h4>
+				<p class="gap">Erlach unter den Halden 12</p>
+				<p class="gap"><b>ACHTUNG!</b> Alle Artikel die auf dieser Seite ausgestellt sind <b>unter Vorbehalt!</b></p>
+			</div>
 		</footer>
 	</body>
 </html>

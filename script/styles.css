@@ -64,9 +64,11 @@ body{
 .artikel{
 	display: block;
 	float: left;
-	height: 200px;
-	margin: 20px;
-	position: relative;
+	height: 100%;
+	margin: 15px;
+	border-radius: 20px;
+	background-color: #fafafa;
+	Padding: 10px;
 }
 
 .inhalt{
@@ -115,22 +117,25 @@ li a , li p{
 }
 
 div img{
-	max-width:100%;
 	max-height:100%;
 }
 
-footer{
+.footer{
 	color: #ffffff;
     background-color: #222;
-	padding: 20px;
-    overflow: hidden;
-    bottom: 0;
-	width:100%;
+	float: left;
 	bottom: 0px;
-	position:absolute;
-	left:0;
+	position:relative;
+	padding-bottom:20px;
+	padding-top:20px;
+	width: 100%;
 }
+.gap{
+	margin: auto;
+	margin-bottom: 0px;
+	text-align: center;
 }
+
 
 footer p {
 	font-size: 15px;
