@@ -29,7 +29,7 @@ function log_fail(){
 	document.getElementById('LogFehler').style.color = "#f00";
 }
 
-/*function register(){
+function register(){
 	username = document.getElementById('username');
 	pass1 = document.getElementById('pass1');
 	pass2 = document.getElementById('pass2');
@@ -218,4 +218,4 @@ function log_fail(){
 		xmlhttp.send("username="+username.value+"&pass1="+pass1.value+"&pass2="+pass2.value+"&mail="+mail.value);
 >>>>>>> parent of d31429a... REgistrierung
 	}
-}*/
+}
