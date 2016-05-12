@@ -14,6 +14,7 @@
 				<li><a href="?p=article&d=all">Artikel</a></li>
 				<li><a href="#">About US</a></li>
 				<li id="login"><a href="?p=login" >LogIn</a></li>
+				<li class="icon"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 			</ul>	
 		</nav>
 <div>

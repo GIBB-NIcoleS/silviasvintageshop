@@ -50,21 +50,36 @@ body{
 	margin-bottom: 20px;
 }
 
-.article-img {
-    display: block;
-    margin: 20px;
-    height: auto; 
-	width: auto;}
-
 .uebersicht{
 	margin-left: auto;
     margin-right: auto;
+}
+
+.article-img {
+    display: block;
+    margin: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+    height: auto; 
+	width: auto;
 }	
 	
 .artikel{
 	display: block;
 	float: left;
 	height: 100%;
+	margin: 10px;
+	border-radius: 20px;
+	background-color: #fafafa;
+	padding: 10px;
+}
+
+div img{
+	max-height:95%;
+	max-width:95%;	
+}
+
+fieldset {
 	margin: 15px;
 	border-radius: 20px;
 	background-color: #fafafa;
@@ -75,50 +90,7 @@ body{
 	margin-left: auto;
     margin-right: auto;
 }	
-	
-nav ul {
-	font-size: 18px;
-    list-style-type: none;
-    overflow: hidden;
-    background-color: #222;
-	color: #ffffff;
-    display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-}
 
-nav li {
-    float: left;
-}
-
-nav li a:hover:not(.active) {
-    background-color: #111;
-}
-
-
-
-ul {
-    list-style-type: none;
-    overflow: hidden;
-}
-
-li {
-    float: left;
-}
-
-li a , li p{
-	color: #ffffff;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-div img{
-	max-height:100%;
-}
 
 .footer{
 	color: #ffffff;
@@ -136,17 +108,10 @@ div img{
 	text-align: center;
 }
 
-
 footer p {
 	font-size: 15px;
 }
 
-fieldset {
-	margin: 15px;
-	border-radius: 20px;
-	background-color: #fafafa;
-	Padding: 10px;
-}
 
 .col-lg-12{width:100%}
 .col-lg-11{width:91.66666667%}
@@ -224,10 +189,101 @@ fieldset {
   color: inherit;
   background-color: #fafafa;
 }
+
 	
-.center-block{display:block;margin-left:auto;margin-right:auto}
-.hide{display:none !important}
-.show{display:block !important}
-.invisible{visibility:hidden}
-.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
-.hidden{display:none !important;visibility:hidden !important}
+nav ul {
+	font-size: 18px;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #222;
+	color: #ffffff;
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a:hover:not(.active) {
+    background-color: #111;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a , li p{
+	color: #ffffff;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* tutorial from w3schools on how to do an responsive navigationbar*/
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+	font-size: 18px;
+	color: #ffffff;
+    background-color: #222;
+}
+
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a, ul.topnav li p{
+    display: inline-block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #111;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}	
+	
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}

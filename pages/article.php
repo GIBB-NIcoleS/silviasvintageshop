@@ -4,29 +4,53 @@
 	<li class="col-lg-2"><a href="#">Gemälde</a></li>
 	<li class="col-lg-2"><a href="#">Allerlei</a></li>
 	<li class="col-lg-2"><a href="#">Besonderes</a></li>
-	<li class="col-lg-2" ><a href="#"><input class="" id="search" name="search" placeholder="Search" type="search" ></a></li>
+	<li class="col-lg-2" ><a href="#"><input class="col-lg-12" id="search" name="search" placeholder="Search" type="search" ></a></li>
 </ul>
-<div class= "col-lg-11 uebersicht">
+<div class= "col-lg-12 uebersicht">
 	<div class="col-lg-3 artikel">
-		<h1>Hi</h1>
+		<h2>Hi</h2>
 		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		<p>Ich weiss ja nnöd</p>
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
 	</div>
-	<div class="col-lg-3 artikel"><h1>Hi</h1>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
 		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
 	</div>
-	<div class="col-lg-3 artikel"><h1>Hi</h1>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
 		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
 	</div>
-	<div class="col-lg-3 artikel"><h1>Hi</h1>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
 		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
 	</div>
-	<div class="col-lg-3 artikel"><h1>Hi</h1>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
 		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
+	</div>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
+		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
+	</div>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
+		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
+	</div>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
+		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
+	</div>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
+		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
+	</div>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
+		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
+	</div>
+	<div class="col-lg-3 artikel"><h2>Hi</h2>
+		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
+		<div class="description"><p>Ich weiss ja nnöd</p></div>
 	</div>
 </div>
 
