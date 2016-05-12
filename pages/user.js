@@ -37,6 +37,8 @@ function register(){
 	pass2 = document.getElementById('passwd2');
 	mail = document.getElementById('email');
 	
+	pVorn = false;
+	pNachn = false;
 	pName = false;
 	pPass1 = false;
 	pPass2 = false;
@@ -49,6 +51,54 @@ function register(){
 	green ='#090';
 	red = '#f00';
 	//Namensüberprüfung
+	if(nachn.value != ''){
+		if(nachn.value.length >= 3 && nachn.value.length <= 10){
+			for(i = 0; i < nachn.value.length; i++){
+				if(buchstabe.indexOf(nachn.value.charAt(i)) >= 0){
+					//fname.innerHTML = "Ok";
+					//fname.style.color = green;
+					pNachn =  true;
+				}	
+				else{
+					//fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
+					//fname.style.color = red;
+					break;
+				}
+			}
+		}
+		else{
+			//fname.innerHTML = "Der Benutzernaem muss zwischen 3 und 10 Zeichen lang sein";
+			//fname.style.color = red;
+		}
+	}else{
+		//fname.innerHTML = 'Sie m&uuml;ssen einen Benutzernamen angeben';
+		//fname.style.color = red;
+	}
+	
+	if(vorn.value != ''){
+		if(vorn.value.length >= 3 && vorn.value.length <= 10){
+			for(i = 0; i < vorn.value.length; i++){
+				if(buchstabe.indexOf(vorn.value.charAt(i)) >= 0){
+					//fname.innerHTML = "Ok";
+					//fname.style.color = green;
+					pVorn =  true;
+				}	
+				else{
+					//fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
+					//fname.style.color = red;
+					break;
+				}
+			}
+		}
+		else{
+			//fname.innerHTML = "Der Benutzernaem muss zwischen 3 und 10 Zeichen lang sein";
+			//fname.style.color = red;
+		}
+	}else{
+		//fname.innerHTML = 'Sie m&uuml;ssen einen Benutzernamen angeben';
+		//fname.style.color = red;
+	}
+	
 	if(username.value != ''){
 		if(username.value.length >= 3 && username.value.length <= 10){
 			for(i = 0; i < username.value.length; i++){
@@ -152,8 +202,10 @@ function register(){
 			}
 		}
 		//PHP übergabe
-		xmlhttp.open("POST","verteiler.php?aktion=2",true);
+		
+		
+		xmlhttp.open("POST","check.php?aktion=2",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xmlhttp.send("user="+username.value+"&pass1="+pass1.value+"&pass2="+pass2.value+"&mail="+mail.value);
+		xmlhttp.send("vorn="+vorn.value+"nachn="+nachn.value+"user="+username.value+"&passwd="+pass1.value+"&passwd2="+pass2.value+"&email="+mail.value);
 	}
 }*/
