@@ -9,8 +9,14 @@
 	padding: 0px;
 }
 
+body{
+	background-image: url("../images/wood.jpg");
+	}
+
 .logo{
 	font-family: Admiration_Pains;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 #login{
@@ -27,6 +33,10 @@
 	-o-filter: saturate(50%);
 	-ms-filter: saturate(50%);
 }
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
 
 .article-img {
     display: block;
@@ -42,7 +52,14 @@
 .artikel{
 	display: block;
 	float: left;
-	height: 50px;
+	height: 200px;
+	margin: 20px;
+	position: relative;
+}
+
+.inhalt{
+	margin-left: auto;
+    margin-right: auto;
 }	
 	
 nav ul {
@@ -85,22 +102,34 @@ li a , li p{
     text-decoration: none;
 }
 
-
+div img{
+	max-width:100%;
+	max-height:100%;
+}
 
 footer{
 	color: #ffffff;
     background-color: #222;
 	padding: 20px;
     overflow: hidden;
-	position: absolute;
     bottom: 0;
-    width: 100%;
+	width:100%;
+	bottom: 0px;
+	position:absolute;
+	left:0;
+}
 }
 
 footer p {
 	font-size: 15px;
 }
 
+fieldset {
+	margin: 15px;
+	border-radius: 20px;
+	background-color: #fafafa;
+	Padding: 10px;
+}
 
 .col-lg-12{width:100%}
 .col-lg-11{width:91.66666667%}
@@ -114,3 +143,74 @@ footer p {
 .col-lg-3{width:25%}
 .col-lg-2{width:16.66666667%}
 .col-lg-1{width:8.33333333%}
+
+
+.form-group{
+	margin:15px;
+	}
+.container{
+	margin-right:auto;
+	margin-left:auto;
+	padding-left:15px;
+	padding-right:15px
+	}
+.btn-primary{
+	color:#ffffff;
+	background-color:#008cba;
+	border-color:#0079a1
+}
+.btn{
+	cursor:not-allowed;
+	pointer-events:none;
+	opacity:0.65;
+	filter:alpha(opacity=65);
+	-webkit-box-shadow:none;
+	box-shadow:none
+	}
+.btn-default{
+	color:#333333;
+	background-color:#e7e7e7;
+	border-color:#cccccc
+	}
+.btn{
+	display:inline-block;
+	text-align:center;
+	vertical-align:middle;
+	border:1px solid transparent;
+	padding:8px 12px;
+	font-size:15px;
+	line-height:1.4;
+	}
+	
+.form-control{
+	display:block;
+	width:100%;
+	height:39px;
+	padding:8px 12px;
+	font-size:15px;
+	line-height:1.4;
+	color:#6f6f6f;
+	background-color:#ffffff;
+	background-image:none;
+	border:1px solid #cccccc;
+	border-radius:0;}	
+	
+.form-horizontal {
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-top:20px;
+	}
+
+.jumbotron {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #fafafa;
+}
+	
+.center-block{display:block;margin-left:auto;margin-right:auto}
+.hide{display:none !important}
+.show{display:block !important}
+.invisible{visibility:hidden}
+.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}
+.hidden{display:none !important;visibility:hidden !important}
