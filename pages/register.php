@@ -1,9 +1,5 @@
 <div class="col-lg-12 form-form">
 	<script type="text/javascript" src="user.js"> </script>
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of 944a1da... test
   <fieldset>
     <h2 class="logo">Profil</h2>
 	
