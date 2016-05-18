@@ -1,3 +1,8 @@
+html {
+    position:relative;
+    min-height: 100%;
+}
+
 @font-face {
     font-family: Admiration_Pains;
     src: url('font/Admiration_Pains.ttf');
@@ -7,6 +12,10 @@
 	font-family: 'Arial', sans-serif;
 	margin:	 0px;
 	padding: 0px;
+}
+
+html{
+	min-height: 100%;
 }
 
 body{
@@ -62,20 +71,28 @@ body{
 .article-img {
     display: block;
     margin: 20px;
-	margin-left: 0px;
-	margin-right: 0px;
-    height: auto; 
+	margin-left: auto;
+	margin-right: auto;
+    height: 300px; 
 	width: auto;
 }	
 	
 .artikel{
 	display: block;
 	float: left;
-	height: 100%;
-	margin: 10px;
+	height: 500px;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	border-radius: 20px;
 	background-color: #fafafa;
-	padding: 10px;
+	padding: 0px;
+	width: 23%
+}
+
+.artikel-inside, .description{
+	padding: 20px;
 }
 
 div img{
@@ -96,16 +113,26 @@ fieldset {
 }	
 
 
-.footer{
+footer{
 	color: #ffffff;
     background-color: #222;
 	float: left;
-	bottom: 0px;
-	position:relative;
+	bottom: 0;
+	position: absolute;
+    margin-top: 100px;
 	padding-bottom:20px;
 	padding-top:20px;
 	width: 100%;
 }
+
+.content{
+    margin-bottom:100px;
+}
+
+.uebersicht{
+	margin-bottom: 400px;
+}
+
 .gap{
 	margin: auto;
 	margin-bottom: 0px;
