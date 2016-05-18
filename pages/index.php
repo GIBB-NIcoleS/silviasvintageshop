@@ -17,7 +17,7 @@
 				<li class="login"><a href="?p=login" >LogIn</a></li>
 				<li class="icon login"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 			</ul>	
-		</nav>
+		</nav> 
 		<div class="content">
 		<?php 
 			if(isset($_GET['p'])|| isset($_GET['d'] )){
