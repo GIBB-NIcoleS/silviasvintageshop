@@ -1,5 +1,6 @@
 <div class="col-lg-12 form-form">
-	<script type="text/javascript" src="user.js"> </script>
+	
+	<form class="" name="frmReg"  action="#.php"   method="post"  id="FormR" onsubmit="return">
   <fieldset>
     <h2 class="logo">Profil</h2>
 	
@@ -31,22 +32,23 @@
 	<div class="form-group">
       <label for="password" class="col-lg-2  ">Passwort</label>
       <div class="col-lg-11">
-        <input class="form-control" id="passwd" name="passwd" placeholder="Password" type="password">
+        <input class="form-control" id="word" name="word" placeholder="Password" type="password">
       </div>
     </div>
 	<div class="form-group">
 	<label for="passworta" class="col-lg-2  ">Passwort wiederholung</label>
       <div class="col-lg-11">
-        <input class="form-control" id="passwd2" name="passwd2" placeholder="Password" type="password">
+        <input class="form-control" id="wordagain" name="wordagain" placeholder="Password" type="password">
       </div>
     </div>
     <div class="form-group">
       <div class="col-lg-11">
         <input type="reset" class="btn btn-default" value="Cancel">
-        <input type="submit" class="btn btn-primary" value="Submit" onclick="register()">
+        <input type="submit" class="btn btn-primary" value="Submit">
       </div>
-	  <h4 id="registr">Schon registriert? Klick <a href="?p=login.php">Hier!</a></h4>
     </div>
   </fieldset>
   </form>
-	
+  
+  
+	 

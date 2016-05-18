@@ -17,45 +17,44 @@
 				<li class="login"><a href="?p=login" >LogIn</a></li>
 				<li class="icon login"><a href="javascript:void(0);" onclick="myFunction()">&#9776;</a></li>
 			</ul>	
-		</nav>
-<div>
-<div class="content">
-<?php 
-	if(isset($_GET['p'])|| isset($_GET['d'] )){
-		$p = $_GET['p'];
-		switch($p){
-		case 'home' :{
-			require_once("home.php");
-			break;
+		</nav> 
+		<div class="content">
+		<?php 
+			if(isset($_GET['p'])|| isset($_GET['d'] )){
+				$p = $_GET['p'];
+				switch($p){
+				case 'home' :{
+					require_once("home.php");
+					break;
+					}
+				
+				case 'article' :{
+					require_once("article.php");
+					break;
+				}
+				case 'myProfile' :{
+					require_once("profil.php");
+					break;
+				}
+				case 'login' :{
+					require_once("login.php");
+					break;
+				}
+				
+				case 'register' :{
+					require_once("register.php");
+					break;
+				}
+				
+				default: {}
 			}
-		
-		case 'article' :{
-			require_once("article.php");
-			break;
-		}
-		case 'myProfile' :{
-			require_once("profil.php");
-			break;
-		}
-		case 'login' :{
-			require_once("login.php");
-			break;
-		}
-		
-		case 'register' :{
-			require_once("register.php");
-			break;
-		}
-		
-		default: {}
-	}
-	}
-	else{ 
-			require_once("home.php");
-			break;
-		}
-?>
-</div>
+			}
+			else{ 
+					require_once("home.php");
+					break;
+				}
+		?>
+		</div>
 
 		
 		<footer>
