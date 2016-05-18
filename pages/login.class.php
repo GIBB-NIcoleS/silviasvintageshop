@@ -11,7 +11,7 @@
 					if($login->name == $name && $login->passwd == $passwd){
 						$_SESSION['username'] = $name;
 						$_SESSION['bewertet'] = $login->bewertet;
-						$_SESSION['kommentiert'] = $login->kommentiert;
+						//$_SESSION['kommentiert'] = $login->kommentiert;
 						return true;
 					}
 					else{

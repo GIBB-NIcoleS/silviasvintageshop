@@ -1,4 +1,5 @@
 function login(){
+	window.alert("login user.js");
 	name = document.getElementById('user').value;
 	password = document.getElementById('pass').value;
 	if(name != '' && password != ''){
@@ -8,7 +9,7 @@ function login(){
 				Weiterleitung =	xmlhttp.responseText;
 				alert(Weiterleitung);
 				if(Weiterleitung == 1){
-					window.location = "myProfile.php";
+					window.location = "?p=register";
 				}
 				else{
 					//log_fail();
