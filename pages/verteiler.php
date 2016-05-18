@@ -7,7 +7,8 @@
 	require_once("wertgegenstand.class.php");
 	require_once("bewertung.class.php");*/
 	switch($_GET["aktion"]){
-		case 1:			
+		case 1:
+
 			$name = $mysqli->real_escape_string($_POST['user']);
 			$passwd = $mysqli->real_escape_string($_POST['pass']);
 			

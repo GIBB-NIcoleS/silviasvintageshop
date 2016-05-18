@@ -18,7 +18,7 @@ function login(){
 		}
 		xmlhttp.open("POST","verteiler.php?aktion=1",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xmlhttp.send("user="+name+"&pass="+pass);
+		xmlhttp.send("user="+name+"&pass="+password);
 	}
 	else{
 		//log_fail();

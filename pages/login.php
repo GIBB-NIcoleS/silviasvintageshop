@@ -14,7 +14,7 @@
 			<div class="form-group">
 			  <label for="inputEmail" class="col-lg-2  ">Password</label>
 			  <div class="col-lg-11">
-				<input class="form-control" id="pass" name="pass" placeholder="Password" type="password" />
+				<input class="form-control" id="pass" name="pass" placeholder="Password" type="text" />
 			  </div>
 			  <span id="LogFehler"> </span> <br />
 			</div>
