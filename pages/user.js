@@ -1,5 +1,4 @@
 function login(){
-	window.alert("login user.js");
 	name = document.getElementById('user').value;
 	password = document.getElementById('pass').value;
 	if(name != '' && password != ''){
@@ -9,7 +8,7 @@ function login(){
 				Weiterleitung =	xmlhttp.responseText;
 				alert(Weiterleitung);
 				if(Weiterleitung == 1){
-					window.location = "?p=register";
+					window.location = "?p=myProfile";
 				}
 				else{
 					//log_fail();
@@ -17,7 +16,7 @@ function login(){
 				}
 			}
 		}
-		xmlhttp.open("POST","check.php?aktion=1",true);
+		xmlhttp.open("POST","verteiler.php?aktion=1",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xmlhttp.send("user="+name+"&pass="+pass);
 	}

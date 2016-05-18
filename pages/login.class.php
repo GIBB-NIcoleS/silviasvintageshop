@@ -1,22 +1,27 @@
 <?php
-		class login{
+		class user{
 			function __construct($mysqli){
 				$this->db = $mysqli;
 			}
 			//Login überprüfung
 			function login($name,$passwd){
-				$log = $this->db->query("SELECT * FROM benutzer WHERE BenutzerName='$name' AND Passwd='$passwd'")or die($this->db->error);
-				
-				while($login = $log->fetch_object()){
-					if($login->name == $name && $login->passwd == $passwd){
-						$_SESSION['username'] = $name;
-						$_SESSION['bewertet'] = $login->bewertet;
-						//$_SESSION['kommentiert'] = $login->kommentiert;
-						return true;
+				$log = $this->db->query("SELECT * FROM benutzer WHERE user='$name' AND Passwd='$passwd'")or die($this->db->error);
+				$l = false;
+					while($login = $log->fetch_object()){
+						if($login->name == $name && $login->passwd == $passwd){
+							$_SESSION['username'] = $name;
+							return true;
+
+						}
+						else{
+							$l = true;
+
+						}
+
 					}
-					else{
-						return false;
-					}
+				alert("name" + $name + "passwd" + $passwd);
+				if($l == true){
+					return false;
 				}
 			}
 			// auf länge überprüfen

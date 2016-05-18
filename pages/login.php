@@ -21,8 +21,8 @@
 			
 			<div class="form-group">
 			  <div class="col-lg-11">
-				<input type="reset" class="btn btn-default" value="Cancel">
-				<input type="submit" class="btn btn-primary" value="Submit" onclick="alert("hallo");"/>
+				<input type="reset" value="Cancel">
+				<input type="button" value="Submit" onclick="login();"/>
 			  </div>
 			  <h4 id="registr">Noch nicht registriert?Klick<a href="?p=register">Hier!</a></h4>
 			</div>

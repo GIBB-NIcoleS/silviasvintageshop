@@ -2,18 +2,19 @@
 	session_start();
 	require("db_connect.php");
 	require_once("login.class.php");
-	require_once("personalien.class.php");
+	/*require_once("personalien.class.php");
 	require_once("kontakt.class.php");
 	require_once("wertgegenstand.class.php");
-	require_once("bewertung.class.php");
+	require_once("bewertung.class.php");*/
 	switch($_GET["aktion"]){
 		case 1:			
-			$name = $mysqli->real_escape_string($_POST['username']);
-			$passwd = $mysqli->real_escape_string($_POST['passwd']);
+			$name = $mysqli->real_escape_string($_POST['user']);
+			$passwd = $mysqli->real_escape_string($_POST['pass']);
 			
 			$passwd = sha1($passwd);
 			$l = new user($mysqli);
 			if($l->login($name,$passwd)){
+
 				echo 1;
 			}
 			else{
