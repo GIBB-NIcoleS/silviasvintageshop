@@ -11,7 +11,8 @@ function login(){
 					window.location = "myProfile.php";
 				}
 				else{
-					log_fail();
+					//log_fail();
+					alert("Fehler")
 				}
 			}
 		}
@@ -20,14 +21,15 @@ function login(){
 		xmlhttp.send("user="+name+"&pass="+pass);
 	}
 	else{
-		log_fail();
+		//log_fail();
+		alert("Fehler")
 	}
 }
 
-function log_fail(){
+/*function log_fail(){
 	document.getElementById('LogFehler').innerHTML = "Ihre Logindaten sind nicht korrekt";
 	document.getElementById('LogFehler').style.color = "#f00";
-}
+}*/
 
 function register(){
 	vorn = document.getElementById('vorn');

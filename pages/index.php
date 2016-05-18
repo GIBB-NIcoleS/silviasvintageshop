@@ -23,35 +23,34 @@
 			if(isset($_GET['p'])|| isset($_GET['d'] )){
 				$p = $_GET['p'];
 				switch($p){
-				case 'home' :{
-					require_once("home.php");
-					break;
+					case 'home' :{
+						require_once("home.php");
+						break;
+						}
+					
+					case 'article' :{
+						require_once("article.php");
+						break;
 					}
-				
-				case 'article' :{
-					require_once("article.php");
-					break;
-				}
-				case 'myProfile' :{
-					require_once("profil.php");
-					break;
-				}
-				case 'login' :{
-					require_once("login.php");
-					break;
-				}
-				
-				case 'register' :{
-					require_once("register.php");
-					break;
-				}
-				
-				default: {}
-			}
+					case 'myProfile' :{
+						require_once("profil.php");
+						break;
+					}
+					case 'login' :{
+						require_once("login.php");
+						break;
+					}
+					
+					case 'register' :{
+						require_once("register.php");
+						break;
+					}
+					
+					default: {}
+					}
 			}
 			else{ 
 					require_once("home.php");
-					break;
 				}
 		?>
 		</div>
