@@ -5,7 +5,7 @@
 			}
 			//Login überprüfung
 			function login($name,$passwd){
-				$log = $this->db->query("SELECT * FROM benutzer WHERE user='$name' AND Passwd='$passwd'")or die($this->db->error);
+				$log = $this->db->query("SELECT * FROM benutzer WHERE user='$name' AND Passwd='$password'")or die($this->db->error);
 				$l = false;
 					while($login = $log->fetch_object()){
 						
@@ -49,7 +49,8 @@
 			}
 			// Person hinzufügen
 			function register($vorn,$nachn,$name,$pass,$vorn,$nachn,$mail){
-				$vorhanden = $this->db->query("SELECT * FROM benutzer as b, person as p WHERE b.BenutzerName='$name' OR p.EMail='$mail'")or die($this->db->error);
+				$vorhanden = $this->db->query("SELECT * FROM benutzer WHERE BenutzerName='$name'")or die($this->db->error);
+				print_r($vorhanden);
 				if($vorhanden->num_rows >=1){
 					return false;
 					die;

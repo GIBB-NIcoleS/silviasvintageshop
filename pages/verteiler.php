@@ -10,11 +10,11 @@
 		case 1:
 
 			$name = $mysqli->real_escape_string($_POST['user']);
-			$passwd = $mysqli->real_escape_string($_POST['pass']);
+			$password = $mysqli->real_escape_string($_POST['pass']);
 			
-			$passwd = sha1($passwd);
+			$password = sha1($password);
 			$l = new user($mysqli);
-			if($l->login($name,$passwd)){
+			if($l->login($name,$password)){
 
 				echo 1;
 			}
@@ -24,21 +24,25 @@
 			
 			break;
 		case 2:
-			$vor = $mysqli->real_escape_string($_POST['vorn']);
-			$nach = $mysqli->real_escape_string($_POST['nachn']);	
+
+			$vorn = $mysqli->real_escape_string($_POST['vor']);
+			$nachn = $mysqli->real_escape_string($_POST['nach']);	
 			$name = $mysqli->real_escape_string($_POST['user']);
 			$pass1 = $mysqli->real_escape_string($_POST['passwd']);
 			$pass2 = $mysqli->real_escape_string($_POST['passwd2']);
 			$mail = $mysqli->real_escape_string($_POST['email']);
-			
+
+
+			echo '<script language="javascript">';
+			echo 'alert("case 2")';
+			echo '</script>';
+
 			$pname=  false;
 			$ppass1 = false;
 			$ppass2 = false;
 			$pmail = false;
 			
-			
-			echo $name;
-			
+
 			$r = new user($mysqli);
 			if(ctype_alnum($name)){
 				if($r->len($name,3,10)){
@@ -75,14 +79,14 @@
 			}
 			
 			if($pname == true && $ppass1 == true && $ppass2 = true && $mail == true){
-				if($r->register($vor,$nach,$name,sha1($pass1),$mail)){
+				if($r->register($vorn,$nachn,$name,sha1($pass1),$mail)){
 					$r->login($name,sha1($pass1));
 					echo 1;
 				}else{
 					echo 0;
 				}
 			}
-			break;*/
+			break;
 		/*case 3:		
 			$vorname = $mysqli->real_escape_string($_POST['vorname']);
 			$nachname = $mysqli->real_escape_string($_POST['nachname']);
