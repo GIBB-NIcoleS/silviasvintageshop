@@ -8,37 +8,47 @@ function login(){
 				Weiterleitung =	xmlhttp.responseText;
 				alert(Weiterleitung);
 				if(Weiterleitung == 1){
-					window.location = "myProfile.php";
+					window.location = "?p=myProfile";
 				}
 				else{
-					log_fail();
+					//log_fail();
+					alert("Fehler")
 				}
 			}
 		}
-		xmlhttp.open("POST","check.php?aktion=1",true);
+		xmlhttp.open("POST","verteiler.php?aktion=1",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xmlhttp.send("user="+name+"&pass="+pass);
+		xmlhttp.send("user="+name+"&pass="+password);
 	}
 	else{
-		log_fail();
+		//log_fail();
+		alert("Fehler")
 	}
 }
 
-function log_fail(){
+/*function log_fail(){
 	document.getElementById('LogFehler').innerHTML = "Ihre Logindaten sind nicht korrekt";
 	document.getElementById('LogFehler').style.color = "#f00";
-}
+}*/
 
-/*function register(){
-	username = document.getElementById('username');
-	pass1 = document.getElementById('pass1');
-	pass2 = document.getElementById('pass2');
-	mail = document.getElementById('mail');
+function register(){
+	vorn = document.getElementById('vor').value;
+	nachn = document.getElementById('nach').value;
+	username = document.getElementById('user').value;
+	pass1 = document.getElementById('passwd').value;
+	pass2 = document.getElementById('passwd2').value;
+	mail = document.getElementById('email').value;
 	
-	fname = document.getElementById('f_name');
+	/*fname = document.getElementById('f_name');
 	fpass1 = document.getElementById('f_pass1');
 	fpass2 = document.getElementById('f_pass2');
 	fmail = document.getElementById('f_mail');
+	vorn = document.getElementById('vorn');
+	nachn = document.getElementById('nachn');
+	username = document.getElementById('user');
+	pass1 = document.getElementById('passwd');
+	pass2 = document.getElementById('passwd2');
+	mail = document.getElementById('email');*/
 	
 	pVorn = false;
 	pNachn = false;
@@ -54,10 +64,10 @@ function log_fail(){
 	green ='#090';
 	red = '#f00';
 	//Namensüberprüfung
-	if(nachn.value != ''){
-		if(nachn.value.length >= 3 && nachn.value.length <= 10){
-			for(i = 0; i < nachn.value.length; i++){
-				if(buchstabe.indexOf(nachn.value.charAt(i)) >= 0){
+	if(nach.value != ''){
+		if(nach.value.length >= 3 && nach.value.length <= 10){
+			for(i = 0; i < nach.value.length; i++){
+				if(buchstabe.indexOf(nach.value.charAt(i)) >= 0){
 					//fname.innerHTML = "Ok";
 					//fname.style.color = green;
 					pNachn =  true;
@@ -66,6 +76,7 @@ function log_fail(){
 					//fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
 					//fname.style.color = red;
 					break;
+
 				}
 			}
 		}
@@ -78,10 +89,10 @@ function log_fail(){
 		//fname.style.color = red;
 	}
 	
-	if(vorn.value != ''){
-		if(vorn.value.length >= 3 && vorn.value.length <= 10){
-			for(i = 0; i < vorn.value.length; i++){
-				if(buchstabe.indexOf(vorn.value.charAt(i)) >= 0){
+	if(vor.value != ''){
+		if(vor.value.length >= 3 && vor.value.length <= 10){
+			for(i = 0; i < vor.value.length; i++){
+				if(buchstabe.indexOf(vor.value.charAt(i)) >= 0){
 					//fname.innerHTML = "Ok";
 					//fname.style.color = green;
 					pVorn =  true;
@@ -103,90 +114,90 @@ function log_fail(){
 	}
 	
 	if(username.value != ''){
-		if(username.value.length >= 3 && username.value.length <= 10){
-			for(i = 0; i < username.value.length; i++){
-				if(buchstabe.indexOf(username.value.charAt(i)) >= 0){
-					fname.innerHTML = "Ok";
-					fname.style.color = green;
+		if(user.value.length >= 3 && user.value.length <= 10){
+			for(i = 0; i < user.value.length; i++){
+				if(buchstabe.indexOf(user.value.charAt(i)) >= 0){
+					//fname.innerHTML = "Ok";
+					//fname.style.color = green;
 					pName =  true;
 				}	
 				else{
-					fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
-					fname.style.color = red;
+					//fname.innerHTML = 'Der Benutzername darf nur aus Grossbuchstaben, Kleinbuchstaben und Zahlen bestehen';
+					//fname.style.color = red;
 					break;
 				}
 			}
 		}
 		else{
-			fname.innerHTML = "Der Benutzernaem muss zwischen 3 und 10 Zeichen lang sein";
-			fname.style.color = red;
+			//fname.innerHTML = "Der Benutzernaem muss zwischen 3 und 10 Zeichen lang sein";
+			//fname.style.color = red;
 		}
 	}else{
-		fname.innerHTML = 'Sie m&uuml;ssen einen Benutzernamen angeben';
-		fname.style.color = red;
+		//fname.innerHTML = 'Sie m&uuml;ssen einen Benutzernamen angeben';
+		//fname.style.color = red;
 	}
 	//passwort überprüfung
 	if(pass1.value != ''){
-		if(pass1.value.length >= 6 && pass1.value.length <= 12){
-			fpass1.innerHTML = 'Ok';
-			fpass1.style.color = green;
+		if(passwd.value.length >= 6 && passwd.value.length <= 12){
+			//fpass1.innerHTML = 'Ok';
+			//fpass1.style.color = green;
 			pPass1 = true;
 		}
 		else{
-			fpass1.innerHTML = 'Das Passwort muss zwischen 6 und 10 Zeichen Lang sein';
-			fpass1.style.color = red;
+			//fpass1.innerHTML = 'Das Passwort muss zwischen 6 und 10 Zeichen Lang sein';
+			//fpass1.style.color = red;
 		}
 	}
 	else{
-		fpass1.innerHTML = 'Sie m&uuml;ssen ein Passwort angeben';
-		fpass1.style.color = red;
+		//fpass1.innerHTML = 'Sie m&uuml;ssen ein Passwort angeben';
+		//fpass1.style.color = red;
 	}
 	//Passwortwiederholung überprüfung
-	if(pass2.value != ''){
-		if(pass2.value == pass1.value){
-			fpass2.innerHTML = 'Ok'
-			fpass2.style.color = green;
+	if(passwd2.value != ''){
+		if(passwd2.value == passwd.value){
+			//fpass2.innerHTML = 'Ok'
+			//fpass2.style.color = green;
 			pPass2 = true;
 		}
 		else{
-			fpass2.innerHTML = 'Die Passw&ouml;rter stimmen nicht &uuml;berein';
-			fpass2.style.color = red;
+			//fpass2.innerHTML = 'Die Passw&ouml;rter stimmen nicht &uuml;berein';
+			//fpass2.style.color = red;
 		}
 	}else{
-		fpass2.innerHTML = 'Sie m&uuml;ssen das Passwort wiederholen';
-		fpass2.style.color = red;
+		//fpass2.innerHTML = 'Sie m&uuml;ssen das Passwort wiederholen';
+		//fpass2.style.color = red;
 	}
 	//EMail überprüfung
 	at = '@';
 	dot = '.';
-	if(mail.value != ''){
+	if(email.value != ''){
 		
-		for(j = 0; j <= (mail.value.length -1); j++){
-			if(at.indexOf(mail.value.charAt(j)) > -1){
+		for(j = 0; j <= (email.value.length -1); j++){
+			if(at.indexOf(email.value.charAt(j)) > -1){
 				Pat = true;
 				break;
 			}
 		}
 
-		for(k = 0; k <= (mail.value.length -1); k++){
-			if(dot.indexOf(mail.value.charAt(k)) > -1){
+		for(k = 0; k <= (email.value.length -1); k++){
+			if(dot.indexOf(email.value.charAt(k)) > -1){
 				Pot = true;
 				break;
 			}
 		}
 		
 		if(Pot == true && Pat == true){
-			fmail.innerHTML = 'Ok';
-			fmail.style.color = green;
+			//fmail.innerHTML = 'Ok';
+			//fmail.style.color = green;
 			pMail = true;
 		}else{
-			fmail.innerHTML = 'Diese E-Mail Adresse ist ungültig';
-			fmail.style.color = red;
+			//fmail.innerHTML = 'Diese E-Mail Adresse ist ungültig';
+			//fmail.style.color = red;
 		}
 	}
 	else{
-		fmail.innerHTML = 'Sie m&uuml;ssen eine E-Mail Adresse angeben';
-		fmail.style.color = red;
+		//fmail.innerHTML = 'Sie m&uuml;ssen eine E-Mail Adresse angeben';
+		//fmail.style.color = red;
 	}
 	//überprüfung
 	if(pName == true && pPass1 == true && pPass2 == true && pMail == true){
@@ -196,7 +207,7 @@ function log_fail(){
 				Weiterleitung =	xmlhttp.responseText;
 				if(Weiterleitung == 11111){
 					alert("Sie haben sich erfolgreich registriert");
-					window.location = "myProfile.php";
+					window.location = "?p=myProfile.php";
 				}
 				
 				if(Weiterleitung == 11110){
@@ -204,18 +215,13 @@ function log_fail(){
 				}
 			}
 		}
-<<<<<<< HEAD
 		//PHP übergabe
-		
-		
-		xmlhttp.open("POST","check.php?aktion=2",true);
-		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xmlhttp.send("vorn="+vorn.value+"nachn="+nachn.value+"user="+username.value+"&passwd="+pass1.value+"&passwd2="+pass2.value+"&email="+mail.value);
-=======
-		//Registration in der Datenbank
+		alert(vorn + nachn + username + pass1 + pass2 + mail);
 		xmlhttp.open("POST","verteiler.php?aktion=2",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xmlhttp.send("username="+username.value+"&pass1="+pass1.value+"&pass2="+pass2.value+"&mail="+mail.value);
->>>>>>> parent of d31429a... REgistrierung
+		xmlhttp.send("vor="+vorn+"nach="+nachn+"user="+username+"&passwd="+pass1+"&passwd2="+pass2+"&email="+mail);
 	}
-}*/
+	else{
+		alert("001");
+	}
+}
