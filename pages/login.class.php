@@ -47,17 +47,18 @@
 					return false;
 				}
 			}
-			// Person hinzufügen
-			function register($vorn,$nachn,$name,$pass,$vorn,$nachn,$mail){
+			// Person vorhandenkeit überprüfen
+			function register($vorn,$nachn,$name,$pass,$mail){
 				$vorhanden = $this->db->query("SELECT * FROM benutzer WHERE user='$name'")or die($this->db->error);
-				print_r($vorhanden);
-				if($vorhanden->num_rows >=1){
+				$vorhanden2 = $this->db->query("SELECT * FROM person WHERE EMail='$mail'")or die($this->db->error);
+				if($vorhanden->num_rows >=1 || $vorhanden2->num_rows >=1){
 					return false;
 					die;
 				}
+			// Person falls nicht vorhanden hinzufügen.
 				else{
 					$this->db->query("INSERT INTO benutzer(user,Passwd) VALUES ('$name','$pass')")or die($this->db->error);
-					//$this->db->query("INSERT INTO person(Benutzername,Vorname,Nachname, EMail) VALUES ('$name','$vorn','$nachn','mail')")or die($this->db->error);
+					$this->db->query("INSERT INTO person(Benutzername,Vorname,Nachname, EMail) VALUES ('$name','$vorn','$nachn','$mail')")or die($this->db->error);
 					return true;
 				}
 			}

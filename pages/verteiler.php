@@ -2,16 +2,15 @@
 	session_start();
 	require("db_connect.php");
 	require_once("login.class.php");
-	/*require_once("personalien.class.php");
+	require_once("personalien.class.php");
 	require_once("kontakt.class.php");
 	require_once("wertgegenstand.class.php");
-	require_once("bewertung.class.php");*/
+	require_once("bewertung.class.php");
 	switch($_GET["aktion"]){
 		case 1:
 
 			$name = $mysqli->real_escape_string($_POST['user']);
 			$password = $mysqli->real_escape_string($_POST['pass']);
-			
 			$password = sha1($password);
 			$l = new user($mysqli);
 			if($l->login($name,$password)){
@@ -31,11 +30,6 @@
 			$pass1 = $mysqli->real_escape_string($_POST['passwd']);
 			$pass2 = $mysqli->real_escape_string($_POST['passwd2']);
 			$mail = $mysqli->real_escape_string($_POST['email']);
-
-
-			echo '<script language="javascript">';
-			echo 'alert("case 2")';
-			echo '</script>';
 
 			$pname=  false;
 			$ppass1 = false;
@@ -91,7 +85,7 @@
 				alert("false");
 			}
 			break;
-		/*case 3:		
+		case 3:		
 			$vorname = $mysqli->real_escape_string($_POST['vorname']);
 			$nachname = $mysqli->real_escape_string($_POST['nachname']);
 			$adresse = $mysqli->real_escape_string($_POST['adresse']);

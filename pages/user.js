@@ -6,7 +6,6 @@ function login(){
 		xmlhttp.onreadystatechange = function(){
 			if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
 				Weiterleitung =	xmlhttp.responseText;
-				alert(Weiterleitung);
 				if(Weiterleitung == 1){
 					window.location = "?p=myProfile";
 				}
@@ -216,10 +215,10 @@ function register(){
 			}
 		}
 		//PHP übergabe
-		alert(vorn + nachn + username + pass1 + pass2 + mail);
+
 		xmlhttp.open("POST","verteiler.php?aktion=2",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-		xmlhttp.send("vor="+vorn+"nach="+nachn+"user="+username+"&passwd="+pass1+"&passwd2="+pass2+"&email="+mail);
+		xmlhttp.send("vor="+vorn+"&nach="+nachn+"&user="+username+"&passwd="+pass1+"&passwd2="+pass2+"&email="+mail);
 	}
 	else{
 		
