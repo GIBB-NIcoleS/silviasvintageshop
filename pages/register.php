@@ -1,6 +1,7 @@
 <div class="col-lg-12 form-form">
 	
 	<form class="" name="frmReg"  id="FormR">
+    <script type="text/javascript" src="user.js"> </script>
   <fieldset>
     <h2 class="logo">Profil</h2>
 	
