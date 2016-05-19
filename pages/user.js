@@ -32,12 +32,13 @@ function login(){
 }*/
 
 function register(){
-	vorn = document.getElementById('vorn');
-	nachn = document.getElementById('nachn');
-	username = document.getElementById('user');
-	pass1 = document.getElementById('passwd');
-	pass2 = document.getElementById('passwd2');
-	mail = document.getElementById('email');
+	vorn = document.getElementById('vorn').value;
+	nachn = document.getElementById('nachn').value;
+	username = document.getElementById('user').value;
+	pass1 = document.getElementById('passwd').value;
+	pass2 = document.getElementById('passwd2').value;
+	mail = document.getElementById('email').value;
+	alert("01");
 	
 	/*fname = document.getElementById('f_name');
 	fpass1 = document.getElementById('f_pass1');
@@ -216,9 +217,12 @@ function register(){
 		}
 		//PHP übergabe
 		
-		
+		alert("vorn="+vorn.value+"nachn="+nachn.value+"user="+username.value+"&passwd="+pass1.value+"&passwd2="+pass2.value+"&email="+mail.value)
 		xmlhttp.open("POST","check.php?aktion=2",true);
 		xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 		xmlhttp.send("vorn="+vorn.value+"nachn="+nachn.value+"user="+username.value+"&passwd="+pass1.value+"&passwd2="+pass2.value+"&email="+mail.value);
+	}
+	else{
+		alert("001");
 	}
 }

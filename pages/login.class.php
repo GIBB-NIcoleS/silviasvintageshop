@@ -48,7 +48,7 @@
 				}
 			}
 			// Person hinzufügen
-			function register($name,$pass,$vorn,$nachn,$mail){
+			function register($vorn,$nachn,$name,$pass,$vorn,$nachn,$mail){
 				$vorhanden = $this->db->query("SELECT * FROM benutzer as b, person as p WHERE b.BenutzerName='$name' OR p.EMail='$mail'")or die($this->db->error);
 				if($vorhanden->num_rows >=1){
 					return false;

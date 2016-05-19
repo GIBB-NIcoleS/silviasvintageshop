@@ -23,11 +23,13 @@
 			}
 			
 			break;
-		/*case 2:			
-			$name = $mysqli->real_escape_string($_POST['username']);
-			$pass1 = $mysqli->real_escape_string($_POST['pass1']);
-			$pass2 = $mysqli->real_escape_string($_POST['pass2']);
-			$mail = $mysqli->real_escape_string($_POST['mail']);
+		case 2:
+			$vor = $mysqli->real_escape_string($_POST['vorn']);
+			$nach = $mysqli->real_escape_string($_POST['nachn']);	
+			$name = $mysqli->real_escape_string($_POST['user']);
+			$pass1 = $mysqli->real_escape_string($_POST['passwd']);
+			$pass2 = $mysqli->real_escape_string($_POST['passwd2']);
+			$mail = $mysqli->real_escape_string($_POST['email']);
 			
 			$pname=  false;
 			$ppass1 = false;
@@ -35,6 +37,7 @@
 			$pmail = false;
 			
 			
+			echo $name;
 			
 			$r = new user($mysqli);
 			if(ctype_alnum($name)){
@@ -72,7 +75,7 @@
 			}
 			
 			if($pname == true && $ppass1 == true && $ppass2 = true && $mail == true){
-				if($r->register($name,sha1($pass1),$mail)){
+				if($r->register($vor,$nach,$name,sha1($pass1),$mail)){
 					$r->login($name,sha1($pass1));
 					echo 1;
 				}else{
@@ -80,7 +83,7 @@
 				}
 			}
 			break;*/
-		case 3:		
+		/*case 3:		
 			$vorname = $mysqli->real_escape_string($_POST['vorname']);
 			$nachname = $mysqli->real_escape_string($_POST['nachname']);
 			$adresse = $mysqli->real_escape_string($_POST['adresse']);
