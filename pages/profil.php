@@ -6,39 +6,33 @@
 	
 	
 	<div class="form-group">
-      <label for="inputEmail" class="col-lg-2"><b>Vorname</b></label>
       <label for="inputEmail" class="col-lg-2 center"><i>Vorname</i></label>
       <div class="col-lg-11">
-        <input class="form-control edit" id="vorn" name="vorn" placeholder="Vorname" type="text" >
+        <input class="form-control edit" id="vorn" name="vorn" placeholder="Maximilian" type="text" >
       </div>
     </div>
 	<div class="form-group">
-      <label for="inputEmail" class="col-lg-2  "><b>Nachname</b></label>
       <label for="inputEmail" class="col-lg-2  center"><i>Nachname</i></label>
       <div class="col-lg-11 ">
-        <input class="form-control edit" id="nachn" name="nachn" placeholder="Nachname" type="text" >
+        <input class="form-control edit" id="nachn" name="nachn" placeholder="Seifert" type="text" >
       </div>
     </div>
 	<div class="form-group">
-      <label for="inputEmail" class="col-lg-2  "><b>Benutzername</b></label>
       <label for="inputEmail" class="col-lg-2  center"><i>Benutzername</i></label>
       <div class="col-lg-11 ">
-        <input class="form-control edit" id="user" name="user" placeholder="Benutzername" type="text" title="Der Benutzername muss genau 6 Zeichen lang sein und darf keine Sonderzeichen beinhalten.">
+        <input class="form-control edit" id="user" name="user" placeholder="Maxlemore" type="text" title="Der Benutzername muss genau 6 Zeichen lang sein und darf keine Sonderzeichen beinhalten.">
       </div>
     </div>
 	<div class="form-group">
-      <label for="inputEmail" class="col-lg-2  "><b>Email</b></label>
       <label for="inputEmail" class="col-lg-2  center"><i>Email</i></label>
       <div class="col-lg-11 ">
-        <input class="form-control edit" id="email" name="email" placeholder="Email" type="text">
+        <input class="form-control edit" id="email" name="email" placeholder="Maximilian.seifert@bluewin.ch" type="text">
       </div>
     </div>
 	<div class="form-group">
-      <label for="password" class="col-lg-2  "><b>Passwort</b></label>
       <label for="password" class="col-lg-2  center"><i>Passwort</i></label>
       <div class="col-lg-11 ">
-        <input class="form-control edit" id="word" name="word" placeholder="Password" type="password">
-        <input class="form-control edit" id="wordagain" name="wordagain" placeholder="Password" type="password">
+        <input class="form-control edit" id="word" name="word" placeholder="*****" type="password">
       </div>
     </div>
     <div class="form-group">

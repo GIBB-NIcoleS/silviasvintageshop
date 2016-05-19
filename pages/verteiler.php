@@ -84,7 +84,11 @@
 					echo 1;
 				}else{
 					echo 0;
+
 				}
+			}
+			else{
+				alert("false");
 			}
 			break;
 		/*case 3:		

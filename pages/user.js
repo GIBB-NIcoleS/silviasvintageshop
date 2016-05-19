@@ -222,6 +222,6 @@ function register(){
 		xmlhttp.send("vor="+vorn+"nach="+nachn+"user="+username+"&passwd="+pass1+"&passwd2="+pass2+"&email="+mail);
 	}
 	else{
-		alert("001");
+		
 	}
 }

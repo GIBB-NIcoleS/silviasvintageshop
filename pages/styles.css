@@ -66,7 +66,7 @@ body{
 .uebersicht{
 	margin-left: auto;
     margin-right: auto;
-} 
+}
 
 .article-img {
     display: block;
@@ -173,8 +173,6 @@ footer p {
 	border-color:#0079a1
 }
 .btn{
-	cursor:not-allowed;
-	pointer-events:none;
 	opacity:0.65;
 	filter:alpha(opacity=65);
 	-webkit-box-shadow:none;
