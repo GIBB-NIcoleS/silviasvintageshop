@@ -207,7 +207,7 @@ function register(){
 				Weiterleitung =	xmlhttp.responseText;
 				if(Weiterleitung == 11111){
 					alert("Sie haben sich erfolgreich registriert");
-					window.location = "?p=profil.php";
+					window.location = "?p=myProfile.php";
 				}
 				
 				if(Weiterleitung == 11110){
