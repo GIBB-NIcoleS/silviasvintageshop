@@ -12,42 +12,7 @@
 		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
 		<div class="description"><p>Ich weiss ja n&ouml;d</p></div>
 	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/Uhren.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja n&ouml;d</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/Uhren.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja n&ouml;d</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/Uhren.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja n&ouml;d</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/Uhren.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja nnöd</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja nnöd</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja nnöd</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja nnöd</p></div>
-	</div>
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja nnöd</p></div>
-	</div>	
-	<div class="artikel"><h2 class="artikel-inside">Hi</h2>
-		<img class="article-img" src="../images/sofa_antik.jpg" alt="Sofa">
-		<div class="description"><p>Ich weiss ja nnöd</p></div>
-	</div>
+	
 </div>
 
 

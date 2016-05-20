@@ -78,7 +78,6 @@
 					echo 1;
 				}else{
 					echo 0;
-
 				}
 			}
 			else{
@@ -92,10 +91,14 @@
 			$hausnummer = $mysqli->real_escape_string($_POST['hausnummer']);
 			$ort = $mysqli->real_escape_string($_POST['ort']);
 			$postleitzahl = $mysqli->real_escape_string($_POST['postleitzahl']);
+			$user = $mysqli->real_escape_string($_POST['username']);
+			$mail = $mysqli->real_escape_string($_POST['mail']);
+			$password = $mysqli->real_escape_string($_POST['password']);
 			
 			$personalien = new personalien($mysqli);
 			if(!empty($vorname) && !empty($nachname) && !empty($adresse) && !empty($hausnummer) && !empty($ort) && !empty($postleitzahl)){
-				if($personalien->db_write(htmlspecialchars($vorname),$nachname,$adresse,$hausnummer,$postleitzahl,$ort,$_SESSION['username'])){
+				print_r($personalien);
+				if($personalien->db_write(htmlspecialchars($vorname),$nachname,$adresse,$hausnummer,$postleitzahl,$ort,$user,$mail,$password,$_SESSION['username'])){
 					echo "Die Personalien wurden erfolgreich erfasst";
 				}
 				else{

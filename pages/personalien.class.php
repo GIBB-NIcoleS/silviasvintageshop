@@ -22,14 +22,16 @@
 				}
 			}
 			
-			function db_write($vorname,$nachname,$adresse,$hausnummer,$postleitzahl,$ort,$username){
-				$probe = $this->db->query("SELECT * FROM profiles WHERE uid = (SELECT uid FROM user WHERE name = '$username')")or die($this->db->error);
+			function db_write($vorname,$nachname,$adresse,$hausnummer,$postleitzahl,$ort,$user,$mail,$password,$username){
+				$probe = $this->db->query("SELECT * FROM person WHERE ID = (SELECT ID FROM user WHERE user = '$username')")or die($this->db->error);
 				if($probe->num_rows == 0){
-					$this->db->query("INSERT INTO profiles (uid,name,vorname,strasse,nr,ort,plz) VALUES ((SELECT uid FROM user WHERE name = '$username'),'$nachname','$vorname','$adresse',$hausnummer,'$ort',$postleitzahl)")or die($this->db->error);
+					$this->db->query("INSERT INTO person (ID,Benutzername,Vorname,Nachname,EMail) VALUES ((SELECT ID FROM person WHERE Benutzername = '$username'),'$vorname','$nachname','$mail')")or die($this->db->error);
+					$this->db->query("INSERT INTO adresse (BenutzerID,Addresse,Hausnr,Plz,Ort) VALUES ((SELECT ID FROM person WHERE Benutzername = '$username'),'$adresse','$hausnummer','$plz','$ort')")or die($this->db->error);
 					return true;
 				}
 				else{
-					$this->db->query("UPDATE profiles set name='$nachname',vorname='$vorname',strasse='$adresse',nr=$hausnummer,ort='$ort',plz=$postleitzahl WHERE uid=(SELECT uid FROM user WHERE name='$username');")or die($this->db->error);
+					$this->db->query("UPDATE person set Nachname='$nachname',Vorname='$vorname',Benutzername='$user',EMail=$mail WHERE BenutzerID=(SELECT BenutzerID FROM benutzer WHERE user='$username');")or die($this->db->error);
+					$this->db->query("UPDATE adresse set Addresse='$adresse',Hausnr='$hausnummer',Plz='$postleitzahl',Ort=$ort WHERE BenutzerID=(SELECT BenutzerID FROM benutzer WHERE user='$username');")or die($this->db->error);
 					return true;
 				}
 			}

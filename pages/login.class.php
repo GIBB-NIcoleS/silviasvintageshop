@@ -60,6 +60,7 @@
 					$this->db->query("INSERT INTO benutzer(user,Passwd) VALUES ('$name','$pass')")or die($this->db->error);
 					$this->db->query("INSERT INTO person(Benutzername,Vorname,Nachname, EMail) VALUES ('$name','$vorn','$nachn','$mail')")or die($this->db->error);
 					return true;
+					
 				}
 			}
 			//Logout
