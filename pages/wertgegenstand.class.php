@@ -4,27 +4,31 @@
 			$this->db = $mysqli;
 		}
 		
-		function db_write($name,$preis,$versicherung,$ansprechperson,$beschreibung,$gegenstand,$quittung,$WkatId){
-			$this->db->query("INSERT INTO wertgegenstand (uid,wertgegenstand,preis,versicherung,ansprechperson,beschreibung,bild,quittung,WkatId) VALUES ((SELECT uid FROM user WHERE name = '".$_SESSION['username']."'),'$name',$preis,'$versicherung','$ansprechperson','$beschreibung','$gegenstand','$quittung',$WkatId)")or die($this->db->error);
-			return true;
-		}
 		
-		function db_read($username){
-			$gegenstaende = $this->db->query("SELECT * FROM wertgegenstand WHERE uid = (SELECT uid FROM user WHERE name = '$username')")or die($this->db->error);
+		function db_read(){
+			$gegenstaende = $this->db->query("SELECT * FROM gegenstand")or die($this->db->error);
+			//$kategorie = $this->db->query("SELECT * FROM kategorie WHERE ID = (SELECT ID FROM interne verbindung kategorie WHERE GegenstandID = KategorieID)")or die($this->db->error);
+			//$künstler = $this->db->query("SELECT * FROM künstler WHERE ID = (SELECT ID FROM interne verknüpfung künstler WHERE GegenstandID = KünstlerID)")or die($this->db->error);
+			//$farbe = $this->db->query("SELECT * FROM farbe WHERE ID = (SELECT ID FROM verbindung WHERE GegenstandID = FarbID)")or die($this->db->error);
+			$bild = $this->db->query("SELECT * FROM bild /*WHERE ID = (SELECT ID FROM interne beziehung bild WHERE GegenstandID = BildID)*/")or die($this->db->error);
 			$i = 0;
+			$o = 0;
 			if($gegenstaende->num_rows > 0){
 				while($gegenstand = $gegenstaende->fetch_object()){
 					$this->gid[$i] = $gegenstand->gid;
-					$this->uid[$i] = $gegenstand->uid;
-					$this->WkatId[$i] = $gegenstand->WkatId;
-					$this->wertgegenstand[$i] = $gegenstand->wertgegenstand;
-					$this->preis[$i] = $gegenstand->preis;
-					$this->versicherung[$i] = $gegenstand->versicherung;
-					$this->ansprechperson[$i] = $gegenstand->ansprechperson;
-					$this->beschreibung[$i] = $gegenstand->beschreibung;
-					$this->bild[$i] = $gegenstand->bild;
-					$this->quittung[$i] = $gegenstand->quittung;
+					$this->wertgegenstand[$i] = $gegenstand->Gegenstandsname;
+					$this->höhe[$i] = $gegenstand->Gegenstandshöhe;
+					$this->breite[$i] = $gegenstand->Gegenstandsbreite;
+					$this->tiefe[$i] = $gegenstand->Gegenstandstiefe;
+					$this->anzahl[$i] = $gegenstand->Anzahl;
+					$this->description[$i] = $gegenstand->Beschreibung;
 					$i++;
+				}
+			}
+			else if($bild->num_rows > 0){
+				while($bilder = $bild->fetch_object()){
+					$this->bild[$o] = $bilder->Image;
+					$o++;
 				}
 			}
 			else{
